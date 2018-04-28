@@ -60,7 +60,14 @@ salt <name> user.delete "amit" remove=True
 salt "salt-master_minion" pkg.install git
 ```
 
+We created a new project where we install an apache package copy the required files and run the apche service
+
 ```bash
+salt 'web.*' state.sls apache
+```
+
+```bash
+salt salt-master_minion state.sls apache
 ```
 
 [Module packages](https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.aptpkg.html#module-salt.modules.aptpkg)
